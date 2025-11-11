@@ -1,0 +1,117 @@
+#!/bin/bash
+
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+#Configuration files
+CONFIG_DIR="${SCRIPT_DIR}/config"
+LOG_DIR="${SCRIPT_DIR}/logs"
+VPC_STATE_FILE="${CONFIG_DIR}/vpc.conf"
+
+mkdir -p "${CONFIG_DIR}" "${LOG_DIR}"
+
+
+# Load library functions from lib directory
+source "${SCRIPT_DIR}/lib/common.sh"
+source "${SCRIPT_DIR}/lib/vpc.sh"
+source "${SCRIPT_DIR}/lib/peering.sh"
+source "${SCRIPT_DIR}/lib/routing.sh"
+source "${SCRIPT_DIR}/lib/firewall.sh"
+source "${SCRIPT_DIR}/lib/subnet.sh"
+
+
+
+# Ensure necessary directories exist
+
+
+#initializing logging
+echo "Initializing VPC Control Tool..."
+init_logging
+
+usage() {
+    cat << EOF
+Usage: vpcctl <command> [options]
+Commands:
+    create-vpc          Create a new VPC
+    delete-vpc          Delete an existing VPC
+    list-vpcs           List all VPCs
+    
+    add-subnet          Add a subnet to a VPC
+    delete-subnet       Delete a subnet from a VPC
+    list-subnets        List subnets in a VPC
+    
+    peer-vpcs           Create peering between two VPCs
+    unpeer-vpcs         Remove peering between VPCs
+    
+    apply-firewall      Apply firewall rules from JSON policy
+    
+    test-connectivity   Run connectivity tests
+    show-status         Show detailed VPC status
+
+    Examples:
+    vpcctl create-vpc --name myvpc --cidr 10.0.0.0/16
+    vpcctl add-subnet --vpc myvpc --name public --cidr 10.0.1.0/24 --type public
+    vpcctl add-subnet --vpc myvpc --name private --cidr 10.0.2.0/24 --type private
+    vpcctl delete-vpc --name myvpc
+
+EOF
+}
+
+main() {
+      if [[ $# -eq 0 ]]; then
+        usage
+        exit 0
+    fi
+
+    local command=$1
+    shift
+
+    case "$command" in
+        create-vpc)
+            cmd_create_vpc "$@"
+            ;;
+        delete-vpc)
+            cmd_delete_vpc "$@"
+            ;;
+        list-vpcs)
+            cmd_list_vpcs "$@"
+            ;;
+        add-subnet)
+            cmd_add_subnet "$@"
+            ;;
+        delete-subnet)
+            cmd_delete_subnet "$@"
+            ;;
+        list-subnets)
+            cmd_list_subnets "$@"
+            ;;
+        peer-vpcs)
+            cmd_peer_vpcs "$@"
+            ;;
+        unpeer-vpcs)
+            cmd_unpeer_vpcs "$@"
+            ;;
+        apply-firewall)
+            cmd_apply_firewall "$@"
+            ;;
+        test-connectivity)
+            cmd_test_connectivity "$@"
+            ;;
+        show-status)
+            cmd_show_status "$@"
+            ;;
+        -h|--help|help)
+            usage
+            exit 0
+            ;;
+        *)
+            log_error "Unknown command: $command"
+            usage
+            exit 1
+            ;;
+    esac
+}
+
+# Execute main function
+main "$@"

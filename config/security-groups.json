@@ -1,0 +1,65 @@
+{
+  "policies": [
+    {
+      "subnet": "10.0.1.0/24",
+      "description": "Public subnet - web server rules",
+      "ingress": [
+        {
+          "port": 80,
+          "protocol": "tcp",
+          "source": "0.0.0.0/0",
+          "action": "allow",
+          "description": "Allow HTTP from anywhere"
+        },
+        {
+          "port": 443,
+          "protocol": "tcp",
+          "source": "0.0.0.0/0",
+          "action": "allow",
+          "description": "Allow HTTPS from anywhere"
+        },
+        {
+          "port": 22,
+          "protocol": "tcp",
+          "source": "10.0.0.0/16",
+          "action": "allow",
+          "description": "Allow SSH from VPC only"
+        }
+      ],
+      "egress": [
+        {
+          "destination": "0.0.0.0/0",
+          "action": "allow",
+          "description": "Allow all outbound traffic"
+        }
+      ]
+    },
+    {
+      "subnet": "10.0.2.0/24",
+      "description": "Private subnet - database rules",
+      "ingress": [
+        {
+          "port": 3306,
+          "protocol": "tcp",
+          "source": "10.0.1.0/24",
+          "action": "allow",
+          "description": "Allow MySQL from public subnet"
+        },
+        {
+          "port": 22,
+          "protocol": "tcp",
+          "source": "10.0.1.0/24",
+          "action": "allow",
+          "description": "Allow SSH from public subnet"
+        }
+      ],
+      "egress": [
+        {
+          "destination": "10.0.0.0/16",
+          "action": "allow",
+          "description": "Allow traffic within VPC"
+        }
+      ]
+    }
+  ]
+}

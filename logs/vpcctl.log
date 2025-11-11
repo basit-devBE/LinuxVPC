@@ -1,0 +1,162 @@
+Logging initialized at Sat Nov  8 10:36:06 AM GMT 2025
+Sat Nov  8 10:36:06 AM GMT 2025 [INFO] Creating VPC 'BasitVPC' with CIDR '10.0.0.0/16'
+Sat Nov  8 10:36:06 AM GMT 2025 [INFO] Saved VPC BasitVPC state
+Sat Nov  8 10:36:06 AM GMT 2025 [SUCCESS] VPC BasitVPC created successfully
+Sat Nov  8 10:36:06 AM GMT 2025 [INFO] Bridge: br-BasitVPC, CIDR: 10.0.0.0/16
+Sat Nov  8 10:36:06 AM GMT 2025 [INFO] Gateway IP: 10.0.0.1/16
+Logging initialized at Sat Nov  8 10:36:25 AM GMT 2025
+Logging initialized at Sat Nov  8 10:40:06 AM GMT 2025
+Sat Nov  8 10:40:06 AM GMT 2025 [INFO] Deleting VPC: BasitVPC
+Logging initialized at Sat Nov  8 10:40:19 AM GMT 2025
+Logging initialized at Sat Nov  8 10:40:27 AM GMT 2025
+Sat Nov  8 10:40:27 AM GMT 2025 [INFO] Deleting VPC: BasitVPC
+Logging initialized at Sat Nov  8 10:40:56 AM GMT 2025
+Logging initialized at Sat Nov  8 10:41:06 AM GMT 2025
+Sat Nov  8 10:41:06 AM GMT 2025 [INFO] Creating VPC 'BasitVPC' with CIDR '10.0.0.0/16'
+Sat Nov  8 10:41:06 AM GMT 2025 [INFO] Saved VPC BasitVPC state
+Sat Nov  8 10:41:06 AM GMT 2025 [SUCCESS] VPC BasitVPC created successfully
+Sat Nov  8 10:41:06 AM GMT 2025 [INFO] Bridge: br-BasitVPC, CIDR: 10.0.0.0/16
+Sat Nov  8 10:41:06 AM GMT 2025 [INFO] Gateway IP: 10.0.0.1/16
+Logging initialized at Sat Nov  8 10:41:12 AM GMT 2025
+Logging initialized at Sat Nov  8 10:42:39 AM GMT 2025
+Logging initialized at Sat Nov  8 10:42:52 AM GMT 2025
+[2025-11-08 10:42:52] [INFO] Creating VPC 'BasitVPC' with CIDR '10.0.0.0/16'
+[2025-11-08 10:42:52] [INFO] Saved VPC BasitVPC state
+[2025-11-08 10:42:52] [SUCCESS] VPC BasitVPC created successfully
+[2025-11-08 10:42:52] [INFO] Bridge: br-BasitVPC, CIDR: 10.0.0.0/16
+[2025-11-08 10:42:52] [INFO] Gateway IP: 10.0.0.1/16
+Logging initialized at Sat Nov  8 10:52:20 AM GMT 2025
+[2025-11-08 10:52:20] [INFO] Deleting VPC: BasitVPC
+Logging initialized at Sat Nov  8 10:55:06 AM GMT 2025
+[2025-11-08 10:55:06] [INFO] Deleting VPC: BasitVPC
+[2025-11-08 10:55:06] [INFO] Removed VPC BasitVPC from state file
+[2025-11-08 10:55:06] [SUCCESS] VPC BasitVPC deleted successfully
+Logging initialized at Mon Nov 10 09:06:50 PM GMT 2025
+[2025-11-10 21:06:50] [WARN] VPC BasitVPC does not exist (bridge br-BasitVPC not found)
+[2025-11-10 21:06:51] [INFO] Removed VPC BasitVPC from state file
+Logging initialized at Mon Nov 10 09:06:55 PM GMT 2025
+[2025-11-10 21:06:55] [INFO] Creating VPC 'TestVPC' with CIDR '10.0.0.0/16'
+[2025-11-10 21:06:55] [INFO] Saved VPC TestVPC state
+[2025-11-10 21:06:55] [SUCCESS] VPC TestVPC created successfully
+[2025-11-10 21:06:55] [INFO] Bridge: br-TestVPC, CIDR: 10.0.0.0/16
+[2025-11-10 21:06:55] [INFO] Gateway IP: 10.0.0.1/16
+Logging initialized at Mon Nov 10 09:07:09 PM GMT 2025
+[2025-11-10 21:07:09] [INFO] Creating public subnet: public in VPC: TestVPC
+[2025-11-10 21:07:09] [INFO]   CIDR: 10.0.1.0/24
+[2025-11-10 21:07:09] [INFO]   Namespace: TestVPC-public
+Logging initialized at Mon Nov 10 09:08:14 PM GMT 2025
+[2025-11-10 21:08:14] [INFO] Creating public subnet: public in VPC: TestVPC
+[2025-11-10 21:08:14] [INFO]   CIDR: 10.0.1.0/24
+[2025-11-10 21:08:14] [INFO]   Namespace: TestVPC-public
+[2025-11-10 21:08:14] [ERROR] Failed to add default route
+Logging initialized at Mon Nov 10 09:09:02 PM GMT 2025
+[2025-11-10 21:09:02] [INFO] Creating public subnet: public in VPC: TestVPC
+[2025-11-10 21:09:02] [INFO]   CIDR: 10.0.1.0/24
+[2025-11-10 21:09:02] [INFO]   Namespace: TestVPC-public
+[2025-11-10 21:09:03] [ERROR] Failed to add default route
+Logging initialized at Mon Nov 10 09:10:32 PM GMT 2025
+[2025-11-10 21:10:32] [INFO] Creating public subnet: public in VPC: TestVPC
+[2025-11-10 21:10:32] [INFO]   CIDR: 10.0.1.0/24
+[2025-11-10 21:10:32] [INFO]   Namespace: TestVPC-public
+[2025-11-10 21:10:33] [INFO] Enabling NAT for subnet 10.0.1.0/24 via wlp1s0
+[2025-11-10 21:10:33] [INFO] Subnet state saved: public in TestVPC
+[2025-11-10 21:10:33] [SUCCESS] Subnet public created successfully
+[2025-11-10 21:10:33] [INFO]   Type: public
+[2025-11-10 21:10:33] [INFO]   Host IP: 10.0.1.10/24
+[2025-11-10 21:10:33] [INFO]   Gateway: 10.0.0.1
+Logging initialized at Mon Nov 10 09:10:42 PM GMT 2025
+[2025-11-10 21:10:42] [INFO] Creating private subnet: private in VPC: TestVPC
+[2025-11-10 21:10:42] [INFO]   CIDR: 10.0.2.0/24
+[2025-11-10 21:10:42] [INFO]   Namespace: TestVPC-private
+[2025-11-10 21:10:43] [INFO] Subnet state saved: private in TestVPC
+[2025-11-10 21:10:43] [SUCCESS] Subnet private created successfully
+[2025-11-10 21:10:43] [INFO]   Type: private
+[2025-11-10 21:10:43] [INFO]   Host IP: 10.0.2.10/24
+[2025-11-10 21:10:43] [INFO]   Gateway: 10.0.0.1
+Logging initialized at Mon Nov 10 09:10:52 PM GMT 2025
+Logging initialized at Mon Nov 10 09:11:00 PM GMT 2025
+Logging initialized at Mon Nov 10 09:29:33 PM GMT 2025
+[2025-11-10 21:29:33] [INFO] Deleting subnet: public from VPC: TestVPC
+[2025-11-10 21:29:33] [SUCCESS] Subnet public deleted successfully
+Logging initialized at Mon Nov 10 09:29:34 PM GMT 2025
+[2025-11-10 21:29:34] [INFO] Creating public subnet: public in VPC: TestVPC
+[2025-11-10 21:29:34] [INFO]   CIDR: 10.0.1.0/24
+[2025-11-10 21:29:34] [INFO]   Namespace: TestVPC-public
+[2025-11-10 21:29:34] [INFO] Enabling NAT for subnet 10.0.1.0/24 via wlp1s0
+[2025-11-10 21:29:34] [INFO] Subnet state saved: public in TestVPC
+[2025-11-10 21:29:34] [SUCCESS] Subnet public created successfully
+[2025-11-10 21:29:34] [INFO]   Type: public
+[2025-11-10 21:29:34] [INFO]   Host IP: 10.0.1.10/24
+[2025-11-10 21:29:34] [INFO]   Gateway: 10.0.0.1
+Logging initialized at Mon Nov 10 09:31:55 PM GMT 2025
+[2025-11-10 21:31:55] [INFO] Creating VPC 'VPC2' with CIDR '192.168.0.0/16'
+[2025-11-10 21:31:55] [INFO] Saved VPC VPC2 state
+[2025-11-10 21:31:55] [SUCCESS] VPC VPC2 created successfully
+[2025-11-10 21:31:55] [INFO] Bridge: br-VPC2, CIDR: 192.168.0.0/16
+[2025-11-10 21:31:55] [INFO] Gateway IP: 192.168.0.1/16
+Logging initialized at Mon Nov 10 09:32:36 PM GMT 2025
+[2025-11-10 21:32:36] [INFO] Creating public subnet: web in VPC: VPC2
+[2025-11-10 21:32:36] [INFO]   CIDR: 192.168.1.0/24
+[2025-11-10 21:32:36] [INFO]   Namespace: VPC2-web
+[2025-11-10 21:32:36] [INFO] Enabling NAT for subnet 192.168.1.0/24 via wlp1s0
+[2025-11-10 21:32:36] [INFO] Subnet state saved: web in VPC2
+[2025-11-10 21:32:36] [SUCCESS] Subnet web created successfully
+[2025-11-10 21:32:36] [INFO]   Type: public
+[2025-11-10 21:32:36] [INFO]   Host IP: 192.168.1.10/24
+[2025-11-10 21:32:36] [INFO]   Gateway: 192.168.0.1
+Logging initialized at Mon Nov 10 09:33:02 PM GMT 2025
+[2025-11-10 21:33:02] [INFO] Peering VPCs: TestVPC <-> VPC2
+[2025-11-10 21:33:02] [ERROR] Failed to create veth pair for peering
+Logging initialized at Mon Nov 10 09:34:47 PM GMT 2025
+[2025-11-10 21:34:47] [INFO] Peering VPCs: TestVPC <-> VPC2
+[2025-11-10 21:34:47] [SUCCESS] VPCs peered successfully
+[2025-11-10 21:34:47] [INFO]   TestVPC (10.0.0.0/16) <-> VPC2 (192.168.0.0/16)
+[2025-11-10 21:34:47] [INFO]   Veth pair: vp-TestVP <-> vp-VPC2
+Logging initialized at Mon Nov 10 09:36:20 PM GMT 2025
+Logging initialized at Mon Nov 10 09:36:20 PM GMT 2025
+Logging initialized at Mon Nov 10 09:57:52 PM GMT 2025
+[2025-11-10 21:57:52] [INFO] Applying firewall policy from: /home/basit/Desktop/github_projects/HNG_Internship/stage4/config/security-groups.json
+[2025-11-10 21:57:52] [INFO] Applying policy for subnet 10.0.1.0/24: Public subnet - web server rules
+[2025-11-10 21:57:52] [INFO]   Ingress: allow tcp/80 from 0.0.0.0/0 - Allow HTTP from anywhere
+[2025-11-10 21:57:52] [INFO]   Ingress: allow tcp/443 from 0.0.0.0/0 - Allow HTTPS from anywhere
+[2025-11-10 21:57:52] [INFO]   Ingress: allow tcp/22 from 10.0.0.0/16 - Allow SSH from VPC only
+[2025-11-10 21:57:52] [INFO]   Egress: allow to 0.0.0.0/0 - Allow all outbound traffic
+[2025-11-10 21:57:52] [INFO] Applying policy for subnet 10.0.2.0/24: Private subnet - database rules
+[2025-11-10 21:57:52] [INFO]   Ingress: allow tcp/3306 from 10.0.1.0/24 - Allow MySQL from public subnet
+[2025-11-10 21:57:53] [INFO]   Ingress: allow tcp/22 from 10.0.1.0/24 - Allow SSH from public subnet
+[2025-11-10 21:57:53] [INFO]   Egress: allow to 10.0.0.0/16 - Allow traffic within VPC
+[2025-11-10 21:57:53] [SUCCESS] Firewall policy applied
+Logging initialized at Mon Nov 10 10:02:31 PM GMT 2025
+[2025-11-10 22:02:31] [INFO] Applying firewall policy from: /home/basit/Desktop/github_projects/HNG_Internship/stage4/config/security-groups.json (mode: strict)
+[2025-11-10 22:02:32] [INFO] Applying policy for subnet 10.0.1.0/24: Public subnet - web server rules
+[2025-11-10 22:02:32] [INFO] Setting strict firewall policy (default DROP)
+[2025-11-10 22:02:32] [INFO]   Ingress: allow tcp/80 from 0.0.0.0/0 - Allow HTTP from anywhere
+[2025-11-10 22:02:32] [INFO]   Ingress: allow tcp/443 from 0.0.0.0/0 - Allow HTTPS from anywhere
+[2025-11-10 22:02:32] [INFO]   Ingress: allow tcp/22 from 10.0.0.0/16 - Allow SSH from VPC only
+[2025-11-10 22:02:32] [INFO]   Egress: allow to 0.0.0.0/0 - Allow all outbound traffic
+[2025-11-10 22:02:32] [INFO] Applying policy for subnet 10.0.2.0/24: Private subnet - database rules
+[2025-11-10 22:02:32] [INFO] Setting strict firewall policy (default DROP)
+[2025-11-10 22:02:32] [INFO]   Ingress: allow tcp/3306 from 10.0.1.0/24 - Allow MySQL from public subnet
+[2025-11-10 22:02:32] [INFO]   Ingress: allow tcp/22 from 10.0.1.0/24 - Allow SSH from public subnet
+[2025-11-10 22:02:32] [INFO]   Egress: allow to 10.0.0.0/16 - Allow traffic within VPC
+[2025-11-10 22:02:32] [SUCCESS] Firewall policy applied
+Logging initialized at Mon Nov 10 10:13:20 PM GMT 2025
+Logging initialized at Mon Nov 10 10:13:21 PM GMT 2025
+Logging initialized at Tue Nov 11 08:04:18 AM GMT 2025
+Logging initialized at Tue Nov 11 08:04:33 AM GMT 2025
+[2025-11-11 08:04:33] [INFO] Deleting subnet: public from VPC: TestVPC
+[2025-11-11 08:04:33] [SUCCESS] Subnet public deleted successfully
+Logging initialized at Tue Nov 11 08:04:34 AM GMT 2025
+[2025-11-11 08:04:34] [INFO] Creating public subnet: public in VPC: TestVPC
+[2025-11-11 08:04:34] [INFO]   CIDR: 10.0.1.0/24
+[2025-11-11 08:04:34] [INFO]   Namespace: TestVPC-public
+[2025-11-11 08:04:34] [ERROR] Could not determine internet interface
+Logging initialized at Tue Nov 11 08:04:41 AM GMT 2025
+[2025-11-11 08:04:41] [INFO] Deleting subnet: public from VPC: TestVPC
+[2025-11-11 08:04:42] [SUCCESS] Subnet public deleted successfully
+Logging initialized at Tue Nov 11 08:04:43 AM GMT 2025
+[2025-11-11 08:04:43] [INFO] Creating public subnet: public in VPC: TestVPC
+[2025-11-11 08:04:43] [INFO]   CIDR: 10.0.1.0/24
+[2025-11-11 08:04:43] [INFO]   Namespace: TestVPC-public
+[2025-11-11 08:04:43] [ERROR] Could not determine internet interface
+Logging initialized at Tue Nov 11 08:04:51 AM GMT 2025
