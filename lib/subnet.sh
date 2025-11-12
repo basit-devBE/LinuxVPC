@@ -26,8 +26,9 @@ create_subnet() {
     
     local bridge="br-${vpc_name}"
     local namespace="${vpc_name}-${subnet_name}"
-    local veth_ns="veth-${subnet_name}"
-    local veth_br="veth-${subnet_name}-br"
+    # Shorten veth names to avoid 15-character limit
+    local veth_ns="v-${subnet_name}"
+    local veth_br="vb-${subnet_name}"
     
     # Check if VPC exists
     if ! bridge_exists "$bridge"; then

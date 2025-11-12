@@ -243,3 +243,104 @@ Logging initialized at Wed Nov 12 08:20:03 AM GMT 2025
 [2025-11-12 08:20:03] [INFO] Removed VPC AppVPC from state file
 [2025-11-12 08:20:03] [SUCCESS] VPC AppVPC deleted successfully
 Logging initialized at Wed Nov 12 08:20:13 AM GMT 2025
+Logging initialized at Wed Nov 12 08:59:28 AM GMT 2025
+Logging initialized at Wed Nov 12 09:00:05 AM GMT 2025
+[2025-11-12 09:00:05] [INFO] Creating VPC 'AppVPC' with CIDR '10.0.0.0/16'
+[2025-11-12 09:00:05] [INFO] Saved VPC AppVPC state
+[2025-11-12 09:00:05] [SUCCESS] VPC AppVPC created successfully
+[2025-11-12 09:00:05] [INFO] Bridge: br-AppVPC, CIDR: 10.0.0.0/16
+[2025-11-12 09:00:05] [INFO] Gateway IP: 10.0.0.1/16
+Logging initialized at Wed Nov 12 09:00:39 AM GMT 2025
+Logging initialized at Wed Nov 12 09:01:42 AM GMT 2025
+[2025-11-12 09:01:42] [INFO] Creating public subnet: web in VPC: AppVPC
+[2025-11-12 09:01:42] [INFO]   CIDR: 10.0.1.0/24
+[2025-11-12 09:01:42] [INFO]   Namespace: AppVPC-web
+[2025-11-12 09:01:42] [INFO] Enabling NAT for subnet 10.0.1.0/24 via wlp1s0
+[2025-11-12 09:01:42] [INFO] Subnet state saved: web in AppVPC
+[2025-11-12 09:01:42] [SUCCESS] Subnet web created successfully
+[2025-11-12 09:01:42] [INFO]   Type: public
+[2025-11-12 09:01:42] [INFO]   Host IP: 10.0.1.10/24
+[2025-11-12 09:01:42] [INFO]   Gateway: 10.0.0.1
+Logging initialized at Wed Nov 12 09:02:22 AM GMT 2025
+Logging initialized at Wed Nov 12 09:03:06 AM GMT 2025
+[2025-11-12 09:03:06] [INFO] Creating private subnet: database in VPC: AppVPC
+[2025-11-12 09:03:06] [INFO]   CIDR: 10.0.2.0/24
+[2025-11-12 09:03:07] [INFO]   Namespace: AppVPC-database
+[2025-11-12 09:03:07] [ERROR] Failed to create veth pair
+Logging initialized at Wed Nov 12 09:04:16 AM GMT 2025
+[2025-11-12 09:04:16] [INFO] Creating private subnet: database in VPC: AppVPC
+[2025-11-12 09:04:16] [INFO]   CIDR: 10.0.2.0/24
+[2025-11-12 09:04:16] [INFO]   Namespace: AppVPC-database
+[2025-11-12 09:04:16] [INFO] Subnet state saved: database in AppVPC
+[2025-11-12 09:04:16] [SUCCESS] Subnet database created successfully
+[2025-11-12 09:04:16] [INFO]   Type: private
+[2025-11-12 09:04:16] [INFO]   Host IP: 10.0.2.10/24
+[2025-11-12 09:04:16] [INFO]   Gateway: 10.0.0.1
+Logging initialized at Wed Nov 12 09:18:27 AM GMT 2025
+Logging initialized at Wed Nov 12 09:18:42 AM GMT 2025
+[2025-11-12 09:18:42] [INFO] Deleting VPC: AppVPC
+[2025-11-12 09:18:42] [INFO] Deleting subnet: web (namespace: AppVPC-web)
+[2025-11-12 09:18:42] [INFO] Deleted namespace: AppVPC-web
+[2025-11-12 09:18:42] [INFO] Deleting subnet: database (namespace: AppVPC-database)
+[2025-11-12 09:18:42] [INFO] Deleted namespace: AppVPC-database
+[2025-11-12 09:18:42] [INFO] Removed NAT rules for 10.0.0.0/16
+[2025-11-12 09:18:43] [INFO] Deleted bridge br-AppVPC
+[2025-11-12 09:18:43] [INFO] Removed VPC AppVPC from state file
+[2025-11-12 09:18:43] [SUCCESS] VPC AppVPC deleted successfully
+Logging initialized at Wed Nov 12 09:18:48 AM GMT 2025
+Logging initialized at Wed Nov 12 09:19:19 AM GMT 2025
+[2025-11-12 09:19:19] [INFO] Creating VPC 'AppVPC' with CIDR '10.0.0.0/16'
+[2025-11-12 09:19:19] [INFO] Saved VPC AppVPC state
+[2025-11-12 09:19:19] [SUCCESS] VPC AppVPC created successfully
+[2025-11-12 09:19:19] [INFO] Bridge: br-AppVPC, CIDR: 10.0.0.0/16
+[2025-11-12 09:19:19] [INFO] Gateway IP: 10.0.0.1/16
+Logging initialized at Wed Nov 12 09:20:06 AM GMT 2025
+Logging initialized at Wed Nov 12 09:20:57 AM GMT 2025
+[2025-11-12 09:20:57] [INFO] Creating public subnet: web in VPC: AppVPC
+[2025-11-12 09:20:57] [INFO]   CIDR: 10.0.1.0/24
+[2025-11-12 09:20:57] [INFO]   Namespace: AppVPC-web
+[2025-11-12 09:20:58] [INFO] Enabling NAT for subnet 10.0.1.0/24 via wlp1s0
+[2025-11-12 09:20:58] [INFO] Subnet state saved: web in AppVPC
+[2025-11-12 09:20:58] [SUCCESS] Subnet web created successfully
+[2025-11-12 09:20:58] [INFO]   Type: public
+[2025-11-12 09:20:58] [INFO]   Host IP: 10.0.1.10/24
+[2025-11-12 09:20:58] [INFO]   Gateway: 10.0.0.1
+Logging initialized at Wed Nov 12 09:21:41 AM GMT 2025
+Logging initialized at Wed Nov 12 09:22:22 AM GMT 2025
+[2025-11-12 09:22:22] [INFO] Creating private subnet: database in VPC: AppVPC
+[2025-11-12 09:22:22] [INFO]   CIDR: 10.0.2.0/24
+[2025-11-12 09:22:22] [INFO]   Namespace: AppVPC-database
+[2025-11-12 09:22:23] [INFO] Subnet state saved: database in AppVPC
+[2025-11-12 09:22:23] [SUCCESS] Subnet database created successfully
+[2025-11-12 09:22:23] [INFO]   Type: private
+[2025-11-12 09:22:23] [INFO]   Host IP: 10.0.2.10/24
+[2025-11-12 09:22:23] [INFO]   Gateway: 10.0.0.1
+Logging initialized at Wed Nov 12 09:22:51 AM GMT 2025
+Logging initialized at Wed Nov 12 09:26:13 AM GMT 2025
+[2025-11-12 09:26:13] [INFO] Creating VPC 'PartnerVPC' with CIDR '192.168.0.0/16'
+[2025-11-12 09:26:13] [INFO] Saved VPC PartnerVPC state
+[2025-11-12 09:26:13] [SUCCESS] VPC PartnerVPC created successfully
+[2025-11-12 09:26:13] [INFO] Bridge: br-PartnerVPC, CIDR: 192.168.0.0/16
+[2025-11-12 09:26:13] [INFO] Gateway IP: 192.168.0.1/16
+Logging initialized at Wed Nov 12 09:26:33 AM GMT 2025
+Logging initialized at Wed Nov 12 09:27:31 AM GMT 2025
+[2025-11-12 09:27:31] [INFO] Creating public subnet: api in VPC: PartnerVPC
+[2025-11-12 09:27:31] [INFO]   CIDR: 192.168.1.0/24
+[2025-11-12 09:27:31] [INFO]   Namespace: PartnerVPC-api
+[2025-11-12 09:27:31] [INFO] Enabling NAT for subnet 192.168.1.0/24 via wlp1s0
+[2025-11-12 09:27:31] [INFO] Subnet state saved: api in PartnerVPC
+[2025-11-12 09:27:31] [SUCCESS] Subnet api created successfully
+[2025-11-12 09:27:31] [INFO]   Type: public
+[2025-11-12 09:27:31] [INFO]   Host IP: 192.168.1.10/24
+[2025-11-12 09:27:31] [INFO]   Gateway: 192.168.0.1
+Logging initialized at Wed Nov 12 09:28:36 AM GMT 2025
+[2025-11-12 09:28:36] [INFO] Peering VPCs: AppVPC <-> PartnerVPC
+[2025-11-12 09:28:37] [SUCCESS] VPCs peered successfully
+[2025-11-12 09:28:37] [INFO]   AppVPC (10.0.0.0/16) <-> PartnerVPC (192.168.0.0/16)
+[2025-11-12 09:28:37] [INFO]   Veth pair: vp-AppVPC <-> vp-Partne
+Logging initialized at Wed Nov 12 09:29:17 AM GMT 2025
+[2025-11-12 09:29:17] [ERROR] Unknown command: list-peerings
+Logging initialized at Wed Nov 12 09:34:13 AM GMT 2025
+Logging initialized at Wed Nov 12 09:34:21 AM GMT 2025
+Logging initialized at Wed Nov 12 09:35:23 AM GMT 2025
+Logging initialized at Wed Nov 12 04:12:04 PM GMT 2025
