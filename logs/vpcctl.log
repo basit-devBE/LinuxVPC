@@ -160,3 +160,86 @@ Logging initialized at Tue Nov 11 08:04:43 AM GMT 2025
 [2025-11-11 08:04:43] [INFO]   Namespace: TestVPC-public
 [2025-11-11 08:04:43] [ERROR] Could not determine internet interface
 Logging initialized at Tue Nov 11 08:04:51 AM GMT 2025
+Logging initialized at Wed Nov 12 07:38:42 AM GMT 2025
+Logging initialized at Wed Nov 12 07:39:12 AM GMT 2025
+[2025-11-12 07:39:12] [WARN] VPC TESTVPC does not exist (bridge br-TESTVPC not found)
+[2025-11-12 07:39:12] [INFO] Removed VPC TESTVPC from state file
+Logging initialized at Wed Nov 12 07:39:46 AM GMT 2025
+Logging initialized at Wed Nov 12 07:40:06 AM GMT 2025
+[2025-11-12 07:40:06] [INFO] Deleting VPC: VPC2
+[2025-11-12 07:40:06] [INFO] Deleting subnet: web
+[2025-11-12 07:40:06] [INFO] Deleting subnet: web from VPC: VPC2
+[2025-11-12 07:40:06] [SUCCESS] Subnet web deleted successfully
+[2025-11-12 07:40:06] [INFO] Removed VPC VPC2 from state file
+[2025-11-12 07:40:06] [SUCCESS] VPC VPC2 deleted successfully
+Logging initialized at Wed Nov 12 07:40:24 AM GMT 2025
+[2025-11-12 07:40:24] [WARN] VPC TESTVPC does not exist (bridge br-TESTVPC not found)
+[2025-11-12 07:40:24] [INFO] Removed VPC TESTVPC from state file
+Logging initialized at Wed Nov 12 07:40:44 AM GMT 2025
+Logging initialized at Wed Nov 12 07:41:07 AM GMT 2025
+[2025-11-12 07:41:07] [INFO] Deleting VPC: TestVPC
+[2025-11-12 07:41:07] [INFO] Deleting subnet: private
+[2025-11-12 07:41:07] [INFO] Deleting subnet: private from VPC: TestVPC
+[2025-11-12 07:41:07] [SUCCESS] Subnet private deleted successfully
+[2025-11-12 07:41:07] [INFO] Removed VPC TestVPC from state file
+[2025-11-12 07:41:07] [SUCCESS] VPC TestVPC deleted successfully
+Logging initialized at Wed Nov 12 07:41:19 AM GMT 2025
+Logging initialized at Wed Nov 12 07:41:58 AM GMT 2025
+[2025-11-12 07:41:58] [INFO] Creating VPC 'AppVPC' with CIDR '10.0.0.0/16'
+[2025-11-12 07:41:58] [INFO] Saved VPC AppVPC state
+[2025-11-12 07:41:58] [SUCCESS] VPC AppVPC created successfully
+[2025-11-12 07:41:58] [INFO] Bridge: br-AppVPC, CIDR: 10.0.0.0/16
+[2025-11-12 07:41:58] [INFO] Gateway IP: 10.0.0.1/16
+Logging initialized at Wed Nov 12 07:42:41 AM GMT 2025
+Logging initialized at Wed Nov 12 07:44:46 AM GMT 2025
+[2025-11-12 07:44:46] [INFO] Creating public subnet: web in VPC: AppVPC
+[2025-11-12 07:44:46] [INFO]   CIDR: 10.0.1.0/24
+[2025-11-12 07:44:46] [INFO]   Namespace: AppVPC-web
+[2025-11-12 07:44:46] [INFO] Enabling NAT for subnet 10.0.1.0/24 via wlp1s0
+[2025-11-12 07:44:46] [INFO] Subnet state saved: web in AppVPC
+[2025-11-12 07:44:46] [SUCCESS] Subnet web created successfully
+[2025-11-12 07:44:46] [INFO]   Type: public
+[2025-11-12 07:44:46] [INFO]   Host IP: 10.0.1.10/24
+[2025-11-12 07:44:46] [INFO]   Gateway: 10.0.0.1
+Logging initialized at Wed Nov 12 07:45:41 AM GMT 2025
+Logging initialized at Wed Nov 12 07:46:54 AM GMT 2025
+Logging initialized at Wed Nov 12 07:48:29 AM GMT 2025
+[2025-11-12 07:48:29] [ERROR] Unknown option: --
+Logging initialized at Wed Nov 12 07:50:04 AM GMT 2025
+[2025-11-12 07:50:04] [INFO] Creating private subnet: database in VPC: AppVPC
+[2025-11-12 07:50:04] [INFO]   CIDR: 10.0.2.0/24
+[2025-11-12 07:50:04] [INFO]   Namespace: AppVPC-database
+[2025-11-12 07:50:04] [ERROR] Failed to create veth pair
+Logging initialized at Wed Nov 12 08:08:17 AM GMT 2025
+Logging initialized at Wed Nov 12 08:08:44 AM GMT 2025
+Logging initialized at Wed Nov 12 08:09:41 AM GMT 2025
+[2025-11-12 08:09:41] [INFO] Deleting subnet: web from VPC: AppVPC
+[2025-11-12 08:09:41] [SUCCESS] Subnet web deleted successfully
+Logging initialized at Wed Nov 12 08:09:48 AM GMT 2025
+Logging initialized at Wed Nov 12 08:10:02 AM GMT 2025
+Logging initialized at Wed Nov 12 08:10:21 AM GMT 2025
+[2025-11-12 08:10:21] [INFO] Deleting VPC: AppVPC
+Logging initialized at Wed Nov 12 08:10:26 AM GMT 2025
+Logging initialized at Wed Nov 12 08:10:42 AM GMT 2025
+[2025-11-12 08:10:42] [INFO] Deleting VPC: AppVPC
+Logging initialized at Wed Nov 12 08:11:51 AM GMT 2025
+[2025-11-12 08:11:51] [INFO] Deleting VPC: AppVPC
+Logging initialized at Wed Nov 12 08:11:55 AM GMT 2025
+Logging initialized at Wed Nov 12 08:12:33 AM GMT 2025
+[2025-11-12 08:12:33] [INFO] Deleting VPC: AppVPC
+Logging initialized at Wed Nov 12 08:12:45 AM GMT 2025
+Logging initialized at Wed Nov 12 08:19:41 AM GMT 2025
+[2025-11-12 08:19:41] [INFO] Deleting VPC: AppVPC
+[2025-11-12 08:19:41] [INFO] No subnets found for VPC AppVPC
+[2025-11-12 08:19:41] [INFO] Removed NAT rules for 10.0.0.0/16
+[2025-11-12 08:19:41] [INFO] Deleted bridge br-AppVPC
+[2025-11-12 08:19:41] [INFO] Removed VPC AppVPC from state file
+[2025-11-12 08:19:41] [SUCCESS] VPC AppVPC deleted successfully
+Logging initialized at Wed Nov 12 08:19:58 AM GMT 2025
+Logging initialized at Wed Nov 12 08:20:03 AM GMT 2025
+[2025-11-12 08:20:03] [INFO] Deleting VPC: AppVPC
+[2025-11-12 08:20:03] [INFO] No subnets found for VPC AppVPC
+[2025-11-12 08:20:03] [WARN] Bridge br-AppVPC does not exist
+[2025-11-12 08:20:03] [INFO] Removed VPC AppVPC from state file
+[2025-11-12 08:20:03] [SUCCESS] VPC AppVPC deleted successfully
+Logging initialized at Wed Nov 12 08:20:13 AM GMT 2025

@@ -91,41 +91,64 @@ delete_vpc() {
     
     local bridge="br-${vpc_name}"
     
-    if ! bridge_exists "$bridge"; then
-        log_warn "VPC $vpc_name does not exist (bridge $bridge not found)"
-        remove_vpc_state "$vpc_name"
-        return 0
-    fi
-    
     log_info "Deleting VPC: $vpc_name"
     
-    # Delete all subnets first (if delete_subnet function exists)
+    # Delete all subnets first
     if [[ -f "${VPC_STATE_FILE}" ]]; then
-        if declare -f delete_subnet >/dev/null 2>&1; then
-            grep "^SUBNET:${vpc_name}:" "${VPC_STATE_FILE}" 2>/dev/null | while IFS=: read -r _ _ subnet_name _; do
-                log_info "Deleting subnet: $subnet_name"
-                delete_subnet "$vpc_name" "$subnet_name" 2>/dev/null || true
-            done
-        else
-            # Just remove subnet entries from state file if function doesn't exist
-            sed -i "/^SUBNET:${vpc_name}:/d" "${VPC_STATE_FILE}" 2>/dev/null || true
+        local subnet_count=0
+        while IFS=: read -r prefix vpc subnet_name cidr type namespace timestamp; do
+            if [[ "$prefix" == "SUBNET" ]] && [[ "$vpc" == "$vpc_name" ]]; then
+                subnet_count=$((subnet_count + 1))
+                log_info "Deleting subnet: $subnet_name (namespace: $namespace)"
+                
+                # Delete namespace if it exists
+                if namespace_exists "$namespace"; then
+                    # Delete veth pair first
+                    local veth_br="veth-${subnet_name}"
+                    ip link delete "$veth_br" 2>/dev/null || true
+                    
+                    # Delete namespace
+                    ip netns delete "$namespace" 2>/dev/null || {
+                        log_warn "Failed to delete namespace $namespace"
+                    }
+                    log_info "Deleted namespace: $namespace"
+                else
+                    log_warn "Namespace $namespace does not exist"
+                fi
+            fi
+        done < "${VPC_STATE_FILE}"
+        
+        if [[ $subnet_count -eq 0 ]]; then
+            log_info "No subnets found for VPC $vpc_name"
         fi
     fi
     
+    # Get CIDR from state file for NAT cleanup
+    local cidr=$(grep "^VPC:${vpc_name}:" "${VPC_STATE_FILE}" 2>/dev/null | cut -d: -f3)
+    
     # Remove NAT rules for this VPC
-    local cidr
-    cidr=$(grep "^VPC:${vpc_name}:" "${VPC_STATE_FILE}" 2>/dev/null | cut -d: -f3)
     if [[ -n "$cidr" ]]; then
-        local internet_iface
-        internet_iface=$(get_internet_interface)
-        iptables -t nat -D POSTROUTING -s "$cidr" -o "$internet_iface" -j MASQUERADE 2>/dev/null || true
+        local internet_iface=$(get_internet_interface)
+        if [[ -n "$internet_iface" ]]; then
+            iptables -t nat -D POSTROUTING -s "$cidr" -o "$internet_iface" -j MASQUERADE 2>/dev/null || true
+            log_info "Removed NAT rules for $cidr"
+        fi
     fi
     
     # Remove bridge
-    ip link delete "$bridge" || {
-        log_error "Failed to delete bridge $bridge"
-        return 1
-    }
+    if bridge_exists "$bridge"; then
+        # Bring down the bridge first
+        ip link set "$bridge" down 2>/dev/null || true
+        
+        # Delete the bridge
+        ip link delete "$bridge" 2>/dev/null || {
+            log_error "Failed to delete bridge $bridge"
+            return 1
+        }
+        log_info "Deleted bridge $bridge"
+    else
+        log_warn "Bridge $bridge does not exist"
+    fi
     
     # Remove VPC state
     remove_vpc_state "$vpc_name"
