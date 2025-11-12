@@ -344,3 +344,84 @@ Logging initialized at Wed Nov 12 09:34:13 AM GMT 2025
 Logging initialized at Wed Nov 12 09:34:21 AM GMT 2025
 Logging initialized at Wed Nov 12 09:35:23 AM GMT 2025
 Logging initialized at Wed Nov 12 04:12:04 PM GMT 2025
+Logging initialized at Wed Nov 12 04:20:18 PM GMT 2025
+Logging initialized at Wed Nov 12 04:20:29 PM GMT 2025
+[2025-11-12 16:20:29] [INFO] Deleting VPC: AppVPC
+[2025-11-12 16:20:29] [INFO] Deleting subnet: web (namespace: AppVPC-web)
+[2025-11-12 16:20:29] [INFO] Deleted namespace: AppVPC-web
+[2025-11-12 16:20:29] [INFO] Deleting subnet: database (namespace: AppVPC-database)
+[2025-11-12 16:20:29] [INFO] Deleted namespace: AppVPC-database
+[2025-11-12 16:20:29] [INFO] Removed NAT rules for 10.0.0.0/16
+[2025-11-12 16:20:29] [INFO] Deleted bridge br-AppVPC
+[2025-11-12 16:20:29] [INFO] Removed VPC AppVPC from state file
+[2025-11-12 16:20:29] [SUCCESS] VPC AppVPC deleted successfully
+Logging initialized at Wed Nov 12 04:20:42 PM GMT 2025
+Logging initialized at Wed Nov 12 04:20:57 PM GMT 2025
+[2025-11-12 16:20:57] [INFO] Deleting VPC: PartnerVPC
+[2025-11-12 16:20:57] [INFO] Deleting subnet: api (namespace: PartnerVPC-api)
+[2025-11-12 16:20:57] [INFO] Deleted namespace: PartnerVPC-api
+[2025-11-12 16:20:57] [INFO] Removed NAT rules for 192.168.0.0/16
+[2025-11-12 16:20:57] [INFO] Deleted bridge br-PartnerVPC
+[2025-11-12 16:20:58] [INFO] Removed VPC PartnerVPC from state file
+[2025-11-12 16:20:58] [SUCCESS] VPC PartnerVPC deleted successfully
+Logging initialized at Wed Nov 12 04:21:04 PM GMT 2025
+Logging initialized at Wed Nov 12 04:21:56 PM GMT 2025
+[2025-11-12 16:21:56] [INFO] Creating VPC 'AppVPC' with CIDR '10.0.0.0/16'
+[2025-11-12 16:21:56] [INFO] Saved VPC AppVPC state
+[2025-11-12 16:21:56] [SUCCESS] VPC AppVPC created successfully
+[2025-11-12 16:21:56] [INFO] Bridge: br-AppVPC, CIDR: 10.0.0.0/16
+[2025-11-12 16:21:56] [INFO] Gateway IP: 10.0.0.1/16
+Logging initialized at Wed Nov 12 04:22:12 PM GMT 2025
+Logging initialized at Wed Nov 12 04:22:55 PM GMT 2025
+[2025-11-12 16:22:55] [INFO] Creating public subnet: web in VPC: AppVPC
+[2025-11-12 16:22:55] [INFO]   CIDR: 10.0.1.0/24
+[2025-11-12 16:22:56] [INFO]   Namespace: AppVPC-web
+[2025-11-12 16:22:56] [ERROR] Failed to create veth pair
+Logging initialized at Wed Nov 12 04:23:25 PM GMT 2025
+[2025-11-12 16:23:25] [INFO] Creating public subnet: web1 in VPC: AppVPC
+[2025-11-12 16:23:25] [INFO]   CIDR: 10.0.1.0/24
+[2025-11-12 16:23:25] [INFO]   Namespace: AppVPC-web1
+[2025-11-12 16:23:25] [INFO] Enabling NAT for subnet 10.0.1.0/24 via wlp1s0
+[2025-11-12 16:23:25] [INFO] Subnet state saved: web1 in AppVPC
+[2025-11-12 16:23:25] [SUCCESS] Subnet web1 created successfully
+[2025-11-12 16:23:25] [INFO]   Type: public
+[2025-11-12 16:23:25] [INFO]   Host IP: 10.0.1.10/24
+[2025-11-12 16:23:25] [INFO]   Gateway: 10.0.0.1
+Logging initialized at Wed Nov 12 04:23:47 PM GMT 2025
+Logging initialized at Wed Nov 12 04:24:40 PM GMT 2025
+[2025-11-12 16:24:40] [ERROR] Unknown option: --
+Logging initialized at Wed Nov 12 04:25:38 PM GMT 2025
+[2025-11-12 16:25:38] [INFO] Creating private subnet: database1 in VPC: AppVPC
+[2025-11-12 16:25:38] [INFO]   CIDR: 10.0.2.0/24
+[2025-11-12 16:25:38] [INFO]   Namespace: AppVPC-database1
+[2025-11-12 16:25:38] [INFO] Subnet state saved: database1 in AppVPC
+[2025-11-12 16:25:38] [SUCCESS] Subnet database1 created successfully
+[2025-11-12 16:25:38] [INFO]   Type: private
+[2025-11-12 16:25:38] [INFO]   Host IP: 10.0.2.10/24
+[2025-11-12 16:25:38] [INFO]   Gateway: 10.0.0.1
+Logging initialized at Wed Nov 12 04:26:08 PM GMT 2025
+Logging initialized at Wed Nov 12 04:29:31 PM GMT 2025
+[2025-11-12 16:29:31] [INFO] Creating VPC 'PartnerVPC' with CIDR '192.168.0.0/16'
+[2025-11-12 16:29:31] [INFO] Saved VPC PartnerVPC state
+[2025-11-12 16:29:31] [SUCCESS] VPC PartnerVPC created successfully
+[2025-11-12 16:29:31] [INFO] Bridge: br-PartnerVPC, CIDR: 192.168.0.0/16
+[2025-11-12 16:29:31] [INFO] Gateway IP: 192.168.0.1/16
+Logging initialized at Wed Nov 12 04:29:48 PM GMT 2025
+Logging initialized at Wed Nov 12 04:30:34 PM GMT 2025
+[2025-11-12 16:30:34] [INFO] Creating public subnet: api in VPC: PartnerVPC
+[2025-11-12 16:30:34] [INFO]   CIDR: 192.168.1.0/24
+[2025-11-12 16:30:34] [INFO]   Namespace: PartnerVPC-api
+[2025-11-12 16:30:34] [ERROR] Failed to create veth pair
+Logging initialized at Wed Nov 12 04:30:43 PM GMT 2025
+[2025-11-12 16:30:43] [INFO] Creating public subnet: api1 in VPC: PartnerVPC
+[2025-11-12 16:30:43] [INFO]   CIDR: 192.168.1.0/24
+[2025-11-12 16:30:43] [INFO]   Namespace: PartnerVPC-api1
+[2025-11-12 16:30:43] [INFO] Enabling NAT for subnet 192.168.1.0/24 via wlp1s0
+[2025-11-12 16:30:43] [INFO] Subnet state saved: api1 in PartnerVPC
+[2025-11-12 16:30:43] [SUCCESS] Subnet api1 created successfully
+[2025-11-12 16:30:43] [INFO]   Type: public
+[2025-11-12 16:30:43] [INFO]   Host IP: 192.168.1.10/24
+[2025-11-12 16:30:43] [INFO]   Gateway: 192.168.0.1
+Logging initialized at Wed Nov 12 04:31:30 PM GMT 2025
+[2025-11-12 16:31:30] [INFO] Peering VPCs: AppVPC <-> PartnerVPC
+[2025-11-12 16:31:30] [WARN] Peering already exists between AppVPC and PartnerVPC
